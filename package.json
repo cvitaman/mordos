@@ -1,0 +1,23 @@
+{
+  "name": "mordos",
+  "version": "1.0.0",
+  "description": "Mord OD - Virtual OS",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvitaman/mordos.git"
+  },
+  "keywords": [
+    "mordos"
+  ],
+  "author": "Ivan Cvitkovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvitaman/mordos/issues"
+  },
+  "homepage": "https://github.com/cvitaman/mordos#readme",
+  "dependencies": {}
+}
