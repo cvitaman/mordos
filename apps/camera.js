@@ -6,6 +6,7 @@ const video = document.querySelector('video');
 const canvas = document.querySelector('canvas');
 const screenshotImage = document.getElementById("screenshotimg");
 const buttons = [...controls.querySelectorAll('.btn')];
+const playInstructions = document.querySelector(".play-instructions");
 let streamStarted = false;
 
 const [play, pause, screenshot] = buttons;
@@ -35,6 +36,8 @@ cameraOptions.onchange = () => {
 };
 
 play.onclick = () => {
+  playInstructions.style.display = "none";
+  video.style.borderBottom = "2px solid grey";
   if (streamStarted) {
     video.play();
     play.classList.add('d-none');

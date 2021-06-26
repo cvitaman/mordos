@@ -13,7 +13,7 @@ body {
 
 .os-container {
   position: relative;
-  background-image: url("https://source.unsplash.com/1600x900/?nature,water");
+  background-image: url("https://source.unsplash.com/1600x900/?wallpapers");
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -35,7 +35,7 @@ body {
 
 .app-btn {
   filter: grayscale(1);
-  opacity: 0.3;
+  opacity: 0.5;
   padding: 10px;
   transform: scale(0.8);
   -webkit-transform: scale(0.8);
@@ -68,15 +68,30 @@ li {
   position: absolute;
   left: 50px;
   top: 50px;
-  background-color: white;
-  border: solid 2px grey;
+  background: white;
+  background: linear-gradient(
+    315deg,
+    rgb(128, 128, 128) 0%,
+    rgba(214, 214, 214, 0.847) 26%,
+    rgb(255, 255, 255) 100%
+  );
+  border: solid 1px grey;
+  border-radius: 5px;
   box-shadow: 3px 3px 5px grey;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .top-bar {
-  background-color: lightgrey;
+  background: rgb(194, 194, 194);
+  background: linear-gradient(
+    0deg,
+    rgb(233, 233, 233) 0%,
+    rgb(175, 175, 175) 100%
+  );
   border-bottom: solid 2px grey;
-  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -84,27 +99,29 @@ li {
   right: 0px;
 }
 
+.title {
+  padding: 7px 10px;
+  font-weight: 700;
+}
+
 .app-btn-close {
-  width: 20px;
-  height: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  width: 30px;
+  padding: 3px 0 0 0;
+  margin: 0 5px 0 0;
   text-align: center;
-  background-color: red;
-  color: white;
-  border: solid 1px black;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  transition: 0.2s;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -ms-transition: 0.2s;
-  -o-transition: 0.2s;
+  color: black;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
 }
 
 .app-btn-close:hover {
   cursor: pointer;
+  font-weight: 700;
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -118,9 +135,27 @@ li {
   overflow: auto;
 }
 
+#app-notes .title {
+  background-image: url("../assets/app-icon-notes.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: 10px;
+  padding-left: 50px;
+}
+
 #app-news {
   width: 500px;
   height: 500px;
+}
+
+#app-news .title {
+  background-image: url("../assets/app-icon-news.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: 10px;
+  padding-left: 50px;
 }
 
 #app-camera {
@@ -128,14 +163,41 @@ li {
   height: 600px;
 }
 
+#app-camera .title {
+  background-image: url("../assets/app-icon-camera.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: 10px;
+  padding-left: 50px;
+}
+
 #app-gallery {
   width: 600px;
   height: 500px;
 }
 
+#app-gallery .title {
+  background-image: url("../assets/app-icon-gallery.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: 10px;
+  padding-left: 50px;
+}
+
 #app-browser {
   width: 600px;
   height: 500px;
+}
+
+#app-browser .title {
+  background-image: url("../assets/app-icon-browser.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: 10px;
+  padding-left: 50px;
 }
 
 /* Repeating classes */
@@ -168,7 +230,7 @@ li {
   -o-transform: translate(-50%, -50%);
 }
 
-/* APP Notes */
+/*  ---------------- APP NOTES   ------------------*/
 .notes-content {
   width: 100%;
 }
@@ -179,33 +241,36 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.file:nth-child(even) {
   background-color: rgb(235, 235, 235);
-}
-
-.file:nth-child(odd) {
-  background-color: rgb(192, 192, 192);
+  border-bottom: 1px solid lightgrey;
 }
 
 .btn-arrow {
-  width: 20px;
-  background-color: black;
-  color: white;
-  padding: 5px;
+  width: 30px;
+  background-color: orange;
+  color: black;
+  padding: 1px 3px 5px 3px;
   margin-left: 10px;
   text-align: center;
-  border-radius: 20%;
+  border: solid 1px darkorange;
+  border-radius: 50%;
   transform: scaleY(0.8);
   -webkit-transform: scaleY(0.8);
   -moz-transform: scaleY(0.8);
   -ms-transform: scaleY(0.8);
   -o-transform: scaleY(0.8);
-  -webkit-border-radius: 20%;
-  -moz-border-radius: 20%;
-  -ms-border-radius: 20%;
-  -o-border-radius: 20%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.btn-arrow:hover {
+  background-color: darkorange;
+}
+
+.icon-up {
+  width: 100%;
 }
 
 .file-title {
@@ -214,22 +279,34 @@ li {
 }
 
 .btn-delete {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
   width: 30px;
-  margin: 0 10px;
+  padding: 3px 0 0 0;
+  margin: 0 10px 0 0;
   text-align: center;
-  background-color: grey;
-  color: white;
-  border: solid 1px black;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  color: black;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+  font-weight: 700;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
 
 .file-text {
   display: none;
   position: absolute;
+  z-index: 999;
   flex-direction: column;
   justify-items: center;
   left: 50px;
@@ -240,16 +317,104 @@ li {
 
 .file-text textarea {
   background-color: yellow;
+  padding: 20px;
+  box-shadow: 1px 1px 15px 2px grey;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .text-close {
-  background-color: yellowgreen;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0px;
+  right: 10px;
   width: 20px;
   padding: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
 }
+
+.text-close:hover {
+  cursor: pointer;
+  font-weight: 700;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.text-save {
+  background-color: orange;
+  border: 2px solid darkorange;
+  margin: 10px;
+  box-shadow: 1px 1px 15px 2px grey;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.text-save:hover {
+  cursor: pointer;
+  background-color: darkorange;
+}
+
+.file-input {
+  margin: 10px;
+  border: solid 1px grey;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background: rgb(194, 194, 194);
+  background: linear-gradient(
+    0deg,
+    rgb(248, 248, 248) 0%,
+    rgb(218, 218, 218) 100%
+  );
+}
+
+.notes-btn {
+  background-color: orange;
+  border: 1px solid darkorange;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.notes-btn:hover {
+  background-color: darkorange;
+  border: 1px solid darkorange;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+/*  ----------------  APP NEWS ------------------*/
 
 .news-content {
   width: 100%;
@@ -259,17 +424,11 @@ li {
 
 .news-item {
   height: min-content;
-  background-color: wheat;
+
+  background-color: rgb(235, 235, 235);
+  border-bottom: 1px solid lightgrey;
   padding: 15px;
   font-weight: 300;
-}
-
-.news-content > :nth-child(odd) {
-  background-color: rgb(235, 235, 235);
-}
-
-.news-content > :nth-child(even) {
-  background-color: rgb(192, 192, 192);
 }
 
 .news-name,
@@ -278,21 +437,40 @@ li {
   padding: 5px;
 }
 
+.news-email {
+  text-decoration: underline;
+}
+
 .news-comment {
   font-weight: 500;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 /* -----------------------   CAMERA APP ------------------  */
+.play-instructions {
+  position: absolute;
+  font-size: 24px;
+}
+
 .screenshot-image {
-  width: 250px;
+  width: 200px;
   height: 150px;
   border-radius: 4px;
-  border: 2px solid whitesmoke;
+  outline: 1px solid grey;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   position: absolute;
-  bottom: 5px;
-  left: 10px;
   background: white;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
 }
 .display-cover {
   justify-content: center;
@@ -300,11 +478,9 @@ li {
   width: 100%;
   height: 555px;
   position: relative;
-  background-color: wheat;
 }
 video {
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
 }
 .video-options {
   position: absolute;
@@ -314,7 +490,7 @@ video {
 .controls {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 25px;
   display: flex;
 }
 .controls > button {
@@ -344,7 +520,7 @@ video {
   padding: 0;
 }
 .controls button:nth-child(1) {
-  border: 2px solid #d2002e;
+  background-color: #d2002e;
 }
 .controls button:nth-child(1) svg {
   color: #d2002e;
@@ -362,8 +538,9 @@ video {
   color: #00b541;
 }
 .controls > button {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  padding: 0;
+  height: 50px;
   text-align: center;
   border-radius: 100%;
   margin: 0 6px;
@@ -379,6 +556,9 @@ video {
   overflow: auto;
   width: 100%;
   height: 455px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px;
 }
 
 .gallery-item {
@@ -386,6 +566,18 @@ video {
   border: 1px solid #ccc;
   float: left;
   width: 180px;
+  background-color: white;
+  box-shadow: 1px 1px 4px 1px rgb(165, 165, 165);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.gallery-caption {
+  padding: 5px;
+  text-transform: capitalize;
 }
 
 /* Style the Image Used to Trigger the Modal */
@@ -419,9 +611,8 @@ video {
 .modal-content {
   margin: auto;
   display: block;
-  width: auto;
-  max-width: 50vw;
-  height: auto;
+  max-width: 600px;
+  max-width: 600px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -457,10 +648,9 @@ video {
   position: absolute;
   top: 15px;
   right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
+  color: white;
+  font-size: 0px;
   font-weight: bold;
-  transition: 0.3s;
 }
 
 .close:hover,
@@ -479,23 +669,160 @@ video {
 
 /* ------------- BROWSER APP -------------- */
 
+.browser-container {
+  width: 100%;
+  height: 100%;
+}
+
 .browser-bar {
-  background-color: wheat;
   display: flex;
   flex-direction: row;
   padding: 10px;
 }
 
+.browser-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.browser-btn {
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.browser-buttons img {
+  width: 20px;
+}
+
 .browser-address {
-  background-color: yellow;
+  display: flex;
+  width: 100%;
 }
 
 .address-input {
-  width: 300px;
+  width: 90%;
   margin: 0 10px;
+  border: solid 1px grey;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .browser-page {
   width: 100%;
-  height: 500px;
+  height: 100%;
+}
+
+.browser-btn {
+  background-color: lightgrey;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.browser-btn:hover {
+  background-color: darkgrey;
+}
+
+.btn-go {
+  background-color: green;
+  border-color: darkgreen;
+  color: white;
+}
+
+.btn-go:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+/*
+#################################################################
+#################################################################
+#################################################################
+########### M O B I L E   S C R E E N S #########################
+#################################################################
+#################################################################
+#################################################################
+*/
+
+/* SCREEN WIDTH 610px-*/
+
+@media only screen and (max-width: 610px) {
+  .os-container {
+    position: relative;
+    background-image: url("https://source.unsplash.com/1600x900/?nature,water");
+    background-size: cover;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+  }
+
+  .navigation {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+
+  #app-notes,
+  #app-news,
+  #app-camera,
+  #app-gallery,
+  #app-browser {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+  }
+
+  /* ------------- NOTES APP -----------*/
+  .file-text {
+    left: 5%;
+    top: 15%;
+    right: 5%;
+    width: auto;
+    height: auto;
+  }
+
+  /* ------------- NEWS APP -----------*/
+  .news-content {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+  }
+
+  /* ------------- GALLERY APP -----------*/
+  .gallery-container {
+    overflow: auto;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+  }
+
+  .gallery-item {
+    width: 90%;
+  }
+
+  /* ------------- BROWSER APP -----------*/
 }

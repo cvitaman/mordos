@@ -1,6 +1,5 @@
 
 
-
 // App Button elements
 const appBtnNotes = document.getElementById("app-btn-notes");
 const appBtnNews = document.getElementById("app-btn-news");
@@ -57,9 +56,9 @@ appBtnNews.addEventListener("click", function() {
         newsComment.classList = "news-comment";    
       
       
-       newsName.innerHTML = data[i].name;
+       newsName.innerHTML = "&#9787; " + data[i].name;
        newsEmail.innerHTML = "@: " + data[i].email;
-       newsComment.innerHTML = data[i].body;
+       newsComment.innerHTML = '" ' + data[i].body + ' "';
       
         newsItem.appendChild(newsName);
         newsItem.appendChild(newsEmail);
@@ -132,7 +131,8 @@ appBtnGallery.addEventListener("click", function() {
         galleryPhoto.onclick = function(){
           modal.style.display = "block";
           modalImg.src = data[i].url;
-          captionText.innerHTML = this.alt;
+          captionText.innerHTML = galleryCaption.innerHTML;
+          console.log(captionText);
         }
 
      }
@@ -279,8 +279,8 @@ btnFileAdd.addEventListener("click", function() {
 
     fileName.innerHTML = fileInput.value;
     btnFileDelete.innerHTML = "x";
-    btnUp.innerHTML = "&#8593;";
-    btnDown.innerHTML = "&#8595;";
+    btnUp.innerHTML = "<img src='./assets/icon-arrow-up.png' class='icon-up'>";
+    btnDown.innerHTML = "<img src='./assets/icon-arrow-down.png' class='icon-up'>";
 
     // Append all elements to appropriate positons
     fileItem.appendChild(btnUp);
@@ -347,7 +347,6 @@ btnFileAdd.addEventListener("click", function() {
 
     // When File name link is clicked to open the txt file
     fileName.addEventListener("click", function() {
-      
       clickedId = Number(fileName.parentElement.getAttribute("id"));
       console.log(clickedId);
       fileText.style.display = "flex";
@@ -425,3 +424,23 @@ btnBack.addEventListener("click", function() {
     pageRender.src = prevPage;
   };
 })
+
+
+
+
+
+///////////// MEDIA QUERY
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    const draggables = document.querySelectorAll(".draggable")
+    
+    draggables.forEach(element => {
+      element.classList.remove("draggable");
+    });
+  } 
+}
+
+var x = window.matchMedia("(max-width: 370px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
