@@ -17,6 +17,11 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  transition: 2s;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
 }
 
 .os-background-text {
@@ -24,6 +29,55 @@ body {
   font-size: 10vw;
   color: lightgray;
   text-shadow: 5px 5px 20px black, 5px 5px 40px grey;
+  transition: 14s;
+  -webkit-transition: 14s;
+  -moz-transition: 14s;
+  -ms-transition: 14s;
+  -o-transition: 14s;
+  opacity: 1;
+}
+
+.authentication-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1000;
+  -webkit-filter: blur(0px);
+}
+
+.authentication {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  background: linear-gradient(
+    315deg,
+    rgb(128, 128, 128) 0%,
+    rgba(214, 214, 214, 0.847) 26%,
+    rgb(255, 255, 255) 100%
+  );
+  border: 2px solid grey;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.os-title {
+  font-weight: 700;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px grey;
+}
+
+#username,
+#password {
+  margin: 10px;
 }
 
 .navigation {
@@ -230,7 +284,13 @@ li {
   -o-transform: translate(-50%, -50%);
 }
 
+.blur {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
+
 /*  ---------------- APP NOTES   ------------------*/
+
 .notes-content {
   width: 100%;
 }
@@ -376,6 +436,7 @@ li {
 
 .file-input {
   margin: 10px;
+  padding-left: 5px;
   border: solid 1px grey;
   border-radius: 10px;
   -webkit-border-radius: 10px;

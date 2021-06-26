@@ -1,3 +1,12 @@
+//Authentication elements
+const authBg = document.querySelector(".authentication-container");
+const osContainer = document.querySelector(".os-container");
+const osTitle = document.querySelector(".os-background-text");
+
+const authTitle = document.querySelector(".auth-title");
+const authEmail = document.getElementById("email");
+const authPassword = document.getElementById("password");
+const authBtn = document.getElementById("auth-btn");
 
 
 // App Button elements
@@ -21,6 +30,48 @@ const appBtnClose = document.querySelectorAll(".app-btn-close");
 // Initial App Settings
 let z = 0;
 
+
+
+
+// Authentication
+
+authEmail.addEventListener("focus", function() {
+  this.value = "";
+})
+
+authPassword.addEventListener("focus", function() {
+  this.value = "";
+})
+
+authBtn.addEventListener("click", function() {
+  let checkEmail = false;
+  let checkPassword = false;
+  
+  if(authEmail.value == "borgoth@mordos.com"){
+    checkEmail = true;
+    console.log(checkEmail);
+  } else {
+    authTitle.innerHTML = "Plese check your e-mail"
+  }
+
+  if(authPassword.value == "12bindthem"){
+    checkPassword = true;
+    console.log(checkPassword);
+  } else {
+    authTitle.innerHTML = "Plese check your password"
+  }
+
+  if((checkEmail == true) && (checkPassword == true)) {
+    authTitle.innerHTML = "Thank you!";
+
+    authBg.style.display = "none";
+    osContainer.classList.remove("blur");
+
+  }
+
+
+
+})
 
 // Functions for opening apps
 
